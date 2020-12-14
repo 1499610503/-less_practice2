@@ -1,0 +1,104 @@
+@maincolor:red;
+*{
+    padding: 0;
+    margin: 0;
+}
+.container(){
+    max-width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0
+}
+ul{
+    list-style: none
+}
+a{
+    text-decoration: none;
+    color: #005555
+}
+body{
+    .container;
+}
+header{
+    background-color: @maincolor+#005555;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid grey;
+    .logo{
+        color: @maincolor + #728077;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .themeColor{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        a{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;    
+            &:nth-child(1){
+                background-color: red;
+            }
+            &:nth-child(2){
+                background-color: blue;
+            }
+            &:nth-child(3){
+                background-color: yellow;
+            }
+        }
+    }
+}
+.banner{
+    width: 100%;
+    overflow: hidden;
+    ul{
+        width: 1000%;
+        li{
+            width: 10%;
+            float: left;
+            img{
+                width: 100%;
+                vertical-align: bottom;
+            }
+        }
+    }
+}
+.box{
+    background-color: @maincolor + #cccccc;
+    ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-around;
+        li{ 
+            width: 20%;
+            a{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50%;
+                display: block;
+                margin: 10px auto;
+                background-color: @maincolor+ #887777;
+            }
+        }
+    }
+}

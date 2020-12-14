@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet/less" href="./less/index.less">
+    <script src="./js/less.min.js"></script>
+</head>
+<body>
+    <header class="clearfix">
+        <div class="logo fl">LOGO</div>
+        <div class="themeColor fr">
+            <a href="#" class="red"></a>
+            <a href="#" class="blue"></a>
+            <a href="#" class="yellow"></a>
+        </div>
+    </header>
+    <div class="banner">
+        <ul class="clearfix">
+            <li>
+                <a href="#"><img src="./img/港口.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/港口.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/港口.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/港口.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./img/港口.jpg" alt=""></a>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <ul>
+            <li>
+                <a href="#">1</a>
+            </li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">5</a>
+            </li>
+            <li>
+                <a href="#">6</a>
+            </li>
+            <li>
+                <a href="#">7</a>
+            </li>
+            <li>
+                <a href="#">8</a>
+            </li>
+            <li>
+                <a href="#">9</a>
+            </li>
+            <li>
+                <a href="#">10</a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        window.onload=function(){
+            var box=document.querySelector(".themeColor");
+            box.onclick=function(e){
+                var e=e||window.event;
+                if(e.target.nodeName=='A'){
+                    less.modifyVars({
+                        'maincolor':e.target.className
+                    })
+                    console.log(e.target.className)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
